@@ -40,6 +40,14 @@
             flex: 0 0 400px;
             order: 2;
         }
+
+        @include breakpoint(992px) {
+            margin: 50px 50px;
+        }
+
+        @include breakpoint(576px) {
+            margin: 50px 20px;
+        }
     }
 
     &__title {

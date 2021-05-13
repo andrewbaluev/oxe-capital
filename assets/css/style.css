@@ -961,6 +961,18 @@ img {
   }
 }
 
+@media only screen and (max-width: 992px) {
+  .department__descr {
+    margin: 50px 50px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .department__descr {
+    margin: 50px 20px;
+  }
+}
+
 .department__title {
   font-size: 30px;
   font-weight: 400;
