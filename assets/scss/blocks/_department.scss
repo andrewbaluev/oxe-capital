@@ -1,27 +1,45 @@
 .department {
-    position: relative;
-    height: 100vh;
-    display: flex;
-    align-items: center;
+
+    padding-top: 30px;
+    padding-bottom: 0;
 
     &__wrapper {
         display: flex;
         align-items: center;
         justify-content: space-between;
+
+        
+        @include breakpoint(1200px) {
+            flex-direction: column;
+
+        }
     }
 
     &__img {
-        img {
-            position: absolute;
-            top: 30px;
-            right: 0;
-            max-width: 690px;
-            height: auto;
+        flex: 0 0 690px;
+
+        @include breakpoint(1400px) {
+            flex: 0 0 600px;
+        }
+
+        @include breakpoint(1200px) {
+            flex: 0 0 400px;
+            order: 1;
         }
     }
 
     &__descr {
+        margin: 0 100px 0 200px;
         max-width: 600px;
+
+        @include breakpoint(1400px) {
+            margin: 50px 100px;
+        }
+
+        @include breakpoint(1200px) {
+            flex: 0 0 400px;
+            order: 2;
+        }
     }
 
     &__title {
