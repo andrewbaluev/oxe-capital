@@ -1,0 +1,62 @@
+.burger-menu {
+    margin-left: 30px;
+    padding: 0;
+    position: relative;
+    width: 30px;
+    height: 22px;
+    cursor: pointer;
+    z-index: 200;
+    background-color: transparent;
+    border: none;
+    display: none;
+
+    @include breakpoint(1200px) {
+        display: block;
+    }
+
+    & span,
+    &::before,
+    &::after {
+        left: 0;
+        position: absolute;
+        height: 12%;
+        width: 100%;
+        transition: all .3s ease;
+        background-color: var(--color-text);
+    }
+
+
+
+    &::before,
+    &::after {
+        content: "";
+    }
+
+    &::before {
+        top: 0;
+    }
+
+    &::after {
+        bottom: 0;
+    }
+
+    & span {
+        top: 50%;
+        transform: scale(1) translate(0px, -50%);
+    }
+
+    &.active span {
+        transform: scale(0) translate(0px, -50%);
+    }
+
+    &.active::before {
+        top: 50%;
+        transform: rotate(-45deg) translate(0px, -50%);
+    }
+
+    &.active::after {
+        bottom: 50%;
+        transform: rotate(45deg) translate(0px, 50%);
+    }
+}
+

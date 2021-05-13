@@ -1,0 +1,14 @@
+@import "vendor/normalize/import-now";
+
+@import "mixin";
+@import "variables";
+@import "fonts";
+@import "ui";
+
+@import "base/visually-hidden";
+@import "base/burger";
+
+@import "blocks/header";
+@import "blocks/post";
+@import "blocks/department";
+

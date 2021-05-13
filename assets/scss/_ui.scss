@@ -1,0 +1,54 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    min-width: 320px;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: var(--color-text);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 10px;
+
+    &-md {
+        max-width: 1520px;
+    }
+
+    &-lg {
+        max-width: 1600px;
+    }
+}
+
+.main {
+    margin-top: 50px;
+}
+
+.section {
+    padding: 100px 0;
+
+    @include breakpoint(992px) {
+        padding: 75px 0;
+    }
+}
